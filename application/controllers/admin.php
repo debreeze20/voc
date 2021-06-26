@@ -22,7 +22,7 @@ class admin extends CI_Controller {
     }
 
     public function product() {
-        if ($this->session->userdata('status')=="login") {
+        if ($this->session->userdata('status') == "login") {
             $dataProduct = $this->modelToko->getData("product");
         
             $data = array(

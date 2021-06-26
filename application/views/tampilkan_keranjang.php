@@ -12,11 +12,11 @@
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th> No </th>
-                    <th> Produk </th>
-                    <th> Jumlah </th>
-                    <th> Harga </th>
-                    <th> Subtotal </th>
+                    <th>No</th>
+                    <th>Produk</th>
+                    <th>Jumlah</th>
+                    <th>Harga</th>
+                    <th>Subtotal</th>
                 </tr>
             </thead>
 
@@ -26,15 +26,13 @@
                     foreach ($this->cart->contents() as $items) : 
                     $i++;
                 ?>
-
                 <tr>
                     <td><?= $i ?></td>
                     <td><?= $items['nama'] ?></td>
                     <td><?= $items['qty'] ?></td>
-                    <td align="right"><?= number_format($items['harga'],0,',','.') ?></td>
+                    <td align="right"><?= number_format($items['price'],0,',','.') ?></td>
                     <td align="right"><?= number_format($items['subtotal'],0,',','.') ?></td>
                 </tr>
-                
                 <?php endforeach; ?>
             </tbody>
 
@@ -44,12 +42,14 @@
                     <td align="right"><?= number_format($this->cart->total(),0,',','.'); ?></td>
                 </tr>
             </tfoot>
+
         </table>
 
         <div align="center">
-            <?= anchor('welcome/hapus_keranjang','Hapus Keranjang',['class'=>'btn btn-danger']) ?> 
-            <?= anchor(base_url(),'Lanjutkan Belanja',['class'=>'btn btn-primary']) ?> 
-            <?= anchor('pesan','Periksa',['class'=>'btn btn-success']) ?>
+            <?= anchor('welcome/clear_cart','Clear Cart',['class'=>'btn btn-danger']) ?> 
+            <?= anchor(base_url(),'Continue Shopping',['class'=>'btn btn-primary']) ?> 
+            <?= anchor('order','Check Out',['class'=>'btn btn-success']) ?>
         </div>
+
     </body>
 </html>

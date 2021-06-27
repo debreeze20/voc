@@ -29,7 +29,7 @@ class modelToko extends CI_Model {
     }
 
     private function _uploadImage() {
-        $config['upload_path']          = './uploads/product/';
+        $config['upload_path']          = './upload/product/';
         $config['allowed_types']        = 'gif|jpg|png';
         $config['file_name']            = $this->no;
         $config['overwrite']			= true;

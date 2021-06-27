@@ -9,11 +9,15 @@ class akun extends CI_Controller {
     }
 
     public function index() {        
-        $this->load->view('home_dataProduk'); 
+        $this->load->view('form_login'); 
     }
 
     public function beranda() {        
         $this->load->view('welcome_message'); 
+    }
+
+    public function tentang() {        
+        $this->load->view('Tentang'); 
     }
 
     public function aksi_login() {        
@@ -34,7 +38,7 @@ class akun extends CI_Controller {
             );
             $this->session->set_userdata($data_session);
 
-            redirect(base_url()."index.php/akun/product/");
+            redirect(base_url()."index.php/akun/product");
         } else {
             redirect(base_url());
         }

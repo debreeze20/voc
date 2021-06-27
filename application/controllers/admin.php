@@ -36,7 +36,7 @@ class admin extends CI_Controller {
         );
 
         $this->modelToko->masukkan('product', $dataInputan);
-        redirect(base_url()."index.php/akun/product");
+        redirect(base_url()."index.php/admin");
     }
 
     public function hapus_data($penunjuk) {
@@ -87,7 +87,7 @@ class admin extends CI_Controller {
             'nama' => $this->input->post('nama'),
             'auth' => $this->input->post('kode')
         );
-        $this->modelku->masukkan('user_api', $dataInputan);
+        $this->modelToko->masukkan('user_api', $dataInputan);
         redirect(base_url()."index.php/admin/");
     
     }

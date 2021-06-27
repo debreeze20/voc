@@ -96,7 +96,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Charts
                             </a>
-                            <a class="nav-link" href="index.php/akun/product">
+                            <a class="nav-link" href="index.php/admin/product">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tables
                             </a>
@@ -191,14 +191,11 @@
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-floating mb-1 mb-md-0">
-                                            <input class="form-control" id="inputDeskripsi" type="file" name="Gambar" />                  
+                                        <!-- <form method="POST" action="<?php echo base_url('uploads/upload') ?>" enctype="multipart/form-data"> -->
+                                            <input class="form-control" id="inputDeskripsi" type="file" name="Gambar" value="<?php echo $product->gambar ?>"/>                  
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
-                                        <div class="form-floating mb-1 mb-md-0">
-                                        <input class="form-control btn btn-primary" id="inputDeskripsi" type="submit" value="Upload" />
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </form>
                             </div>

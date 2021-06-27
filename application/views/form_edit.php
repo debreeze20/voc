@@ -13,8 +13,7 @@
             Harga : <input type="text" name="harga" value="<?php echo $dat['harga']; ?>"><br>
             Stok : <input type="text" name="stok" value="<?php echo $dat['stok']; ?>"><br>
             <form> 
-                Gambar : <input type="file" name="gambar"> 
-                <input type="submit" name="upload" value="Upload"> <br>
+                Gambar : <input type="hidden" name="old_image" value="<?php echo $product->gambar ?>">
             </form>
             <input type="submit" placeholder="Update"> <input type="reset">
         </form>

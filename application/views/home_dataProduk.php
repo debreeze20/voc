@@ -156,20 +156,20 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                    <?php foreach($dataMu as $dat) { ?>
-                                        <tr>
-                                            <td><?php echo $dat['no']; ?></td>
-                                            <td><?php echo $dat['nama']; ?></td>
-                                            <td><?php echo $dat['deskripsi']; ?></td>
-                                            <td><?php echo $dat['harga']; ?></td>
-                                            <td><?php echo $dat['stok']; ?></td>
-                                            <td><?php echo $dat['gambar']; ?></td>
-                                            <td>
-                                                <a href="<?php echo base_url()."index.php/admin/hapus_data/".$dat['no']; ?>"> Hapus  </a>
-                                                <a href="<?php echo base_url()."index.php/admin/ambil_DataWhere/".$dat['no']; ?>"> Update </a>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
+                                        <?php foreach($dataMu as $dat) { ?>
+                                            <tr>
+                                                <td><?php echo $dat['no']; ?></td>
+                                                <td><?php echo $dat['nama']; ?></td>
+                                                <td><?php echo $dat['deskripsi']; ?></td>
+                                                <td><?php echo $dat['harga']; ?></td>
+                                                <td><?php echo $dat['stok']; ?></td>
+                                                <td><?php echo $dat['gambar']; ?></td>
+                                                <td>
+                                                    <a href="<?php echo base_url()."index.php/admin/hapus_data/".$dat['no']; ?>"> Hapus  </a>
+                                                    <a href="<?php echo base_url()."index.php/admin/ambil_DataWhere/".$dat['no']; ?>"> Update </a>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -179,7 +179,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                            <div class="text-muted">Copyright &copy; V.O.C</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;

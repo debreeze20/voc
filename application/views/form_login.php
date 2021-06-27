@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Login - SB Admin</title>
+        <title>Login - V.O.C</title>
         <!-- <link href="css/styles.css" rel="stylesheet" /> -->
         <link href="<?php echo base_url()."assets/css/styles.css" ?>" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
-                                        <form action=" <?php echo base_url()."index.php/akun/aksi_login"; ?> " method="POST">
+                                        <form action="index.php/akun/aksi_login" method="POST">
                                             <div class="form-floating mb-3">
                                                 <input name="username" class="form-control" id="inputUsername" type="text" placeholder="Username" />
                                                 <label for="inputUsername">Username</label>

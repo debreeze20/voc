@@ -11,7 +11,7 @@ class admin extends CI_Controller {
         } 
     }
 
-    public function index() {   
+    public function product() {   
         $dataProduct = $this->modelToko->getData("product");
     
         $data = array(
@@ -21,19 +21,19 @@ class admin extends CI_Controller {
         $this->load->view("home_dataProduk", $data);
     }
 
-    public function product() {
-        if ($this->session->userdata('status') == "login") {
-            $dataProduct = $this->modelToko->getData("product");
+    // public function product() {
+    //     if ($this->session->userdata('status') == "login") {
+    //         $dataProduct = $this->modelToko->getData("product");
         
-            $data = array(
-                "dataMu" => $dataProduct 
-            );
+    //         $data = array(
+    //             "dataMu" => $dataProduct 
+    //         );
             
-            $this->load->view("home_dataProduk", $data);
-        } else  {
-            redirect(base_url());
-        }
-    }
+    //         $this->load->view("home_dataProduk", $data);
+    //     } else  {
+    //         redirect(base_url());
+    //     }
+    // }
 
     public function baca_form() {
         $this->load->view('form_tambah'); 
@@ -91,8 +91,5 @@ class admin extends CI_Controller {
         $dataProduct = $this->modelToko->perbarui("product", $dataInputan, $dataPenunjuk);
         redirect(base_url()."index.php/admin/");
     }
-
-
-
 
 }

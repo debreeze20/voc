@@ -29,9 +29,9 @@ class modelToko extends CI_Model {
     }
 
     private function _uploadImage() {
-        $config['upload_path']          = './upload/product/';
+        $config['upload_path']          = './uploads/product/';
         $config['allowed_types']        = 'gif|jpg|png';
-        $config['file_name']            = $this->product_id;
+        $config['file_name']            = $this->no;
         $config['overwrite']			= true;
         $config['max_size']             = 1024; // 1MB
         // $config['max_width']            = 1024;
@@ -39,7 +39,7 @@ class modelToko extends CI_Model {
 
         $this->load->library('upload', $config);
 
-        if ($this->upload->do_upload('image')) {
+        if ($this->upload->do_upload('gambar')) {
             return $this->upload->data("file_name");
         }
         

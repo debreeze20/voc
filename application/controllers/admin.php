@@ -11,7 +11,7 @@ class admin extends CI_Controller {
         } 
     }
 
-    public function product() {   
+    public function index() {   
         $dataProduct = $this->modelToko->getData("product");
     
         $data = array(
@@ -20,20 +20,6 @@ class admin extends CI_Controller {
         
         $this->load->view("home_dataProduk", $data);
     }
-
-    // public function product() {
-    //     if ($this->session->userdata('status') == "login") {
-    //         $dataProduct = $this->modelToko->getData("product");
-        
-    //         $data = array(
-    //             "dataMu" => $dataProduct 
-    //         );
-            
-    //         $this->load->view("home_dataProduk", $data);
-    //     } else  {
-    //         redirect(base_url());
-    //     }
-    // }
 
     public function baca_form() {
         $this->load->view('form_tambah'); 
@@ -46,11 +32,11 @@ class admin extends CI_Controller {
             'deskripsi' => $this->input->post('deskripsi'),
             'harga' => $this->input->post('harga'),
             'stok' => $this->input->post('stok'),
-            'gambar' => $this->input->post('gambar'),
+            'gambar' => $this->input->post('index.php/akun/_uploadImage'),
         );
 
         $this->modelToko->masukkan('product', $dataInputan);
-        redirect(base_url()."index.php/admin/");
+        redirect(base_url()."index.php/akun/product");
     }
 
     public function hapus_data($penunjuk) {
@@ -90,6 +76,20 @@ class admin extends CI_Controller {
 
         $dataProduct = $this->modelToko->perbarui("product", $dataInputan, $dataPenunjuk);
         redirect(base_url()."index.php/admin/");
+    }
+
+    public function form_daftarAPI() {
+        $this->load->view('form_daftarAPI'); 
+    }
+
+    public function aksi_daftarAPI() {
+        $dataInputan = array(
+            'nama' => $this->input->post('nama'),
+            'auth' => $this->input->post('kode')
+        );
+        $this->modelku->masukkan('user_api', $dataInputan);
+        redirect(base_url()."index.php/admin/");
+    
     }
 
 }

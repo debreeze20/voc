@@ -96,7 +96,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Charts
                             </a>
-                            <a class="nav-link" href="index.php/admin/product">
+                            <a class="nav-link" href="<?php echo base_url()."index.php/akun/product"; ?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tables
                             </a>
@@ -104,7 +104,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        Username
                     </div>
                 </nav>
             </div>
@@ -179,37 +179,45 @@
                                 DataTable Example
                             </div>
                             <div class="card-body">
-                                <table id="datatablesSimple">
+                                <table id="datatablesSimple" class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Deskripsi</th>
+                                            <th>Harga</th>
+                                            <th>Stok</th>
+                                            <th>Gambar</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Deskripsi</th>
+                                            <th>Harga</th>
+                                            <th>Stok</th>
+                                            <th>Gambar</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </tfoot>
+                                    
                                     <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                          
+                                        <?php foreach($dataLib as $dat) { ?>
+                                            <tr>
+                                                <td><?php echo $dat['no']; ?></td>
+                                                <td><?php echo $dat['nama']; ?></td>
+                                                <td><?php echo $dat['deskripsi']; ?></td>
+                                                <td><?php echo $dat['harga']; ?></td>
+                                                <td><?php echo $dat['stok']; ?></td>
+                                                <td><?php echo $dat['gambar']; ?></td>
+                                                <td>
+                                                    <a href="<?php echo base_url()."index.php/admin/hapus_data/".$dat['no']; ?>"> Hapus  </a>
+                                                    <a href="<?php echo base_url()."index.php/admin/ambil_DataWhere/".$dat['no']; ?>"> Update </a>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>

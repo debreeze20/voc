@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tables - SB Admin</title>
+        <title>Tambah Produk - V.O.C</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <!-- <link href="css/styles.css" rel="stylesheet" /> -->
         <link href="<?php echo base_url()."assets/css/styles.css" ?>" rel="stylesheet" />
@@ -96,7 +96,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Charts
                             </a>
-                            <a class="nav-link" href="index.php/admin/product">
+                            <a class="nav-link" href="<?php echo base_url()."index.php/akun/product"; ?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tables
                             </a>
@@ -104,7 +104,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        Username
                     </div>
                 </nav>
             </div>
@@ -126,8 +126,9 @@
                                 <i class="fas fa-table me-1"></i>
                                 Form Input Produk
                             </div>
-                            <div class="card-body">
                             <form action="<?php echo base_url()."index.php/admin/tambah_produk" ?>" method="POST">
+                            <div class="card-body">
+                            
                                 <div class="row mb-3">
                                     <div class="col-md-1">
                                         <div class="form-floating mb-3 mb-md-0">
@@ -136,7 +137,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3 mb-md-0">
-                                            <input class="form-control" id="inputNama" type="text" placeholder="Nama" />      
+                                            <input class="form-control" name="nama" type="text" placeholder="Nama" />      
                                         </div>
                                     </div>
                                 </div>
@@ -149,7 +150,7 @@
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3 mb-md-0">
                                            
-                                            <input class="form-control" id="inputDeskripsi" type="text" placeholder="Deskripsi" />
+                                            <input class="form-control" name="deskripsi" type="text" placeholder="Deskripsi" />
                                             
                                         </div>
                                     </div>
@@ -163,7 +164,7 @@
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3 mb-md-0">
                                             
-                                            <input class="form-control" id="inputHarga" type="text" placeholder="Harga" />
+                                            <input class="form-control" name="harga" type="text" value="Rp. " />
                                             
                                         </div>
                                     </div>
@@ -177,7 +178,7 @@
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3 mb-md-0">
                                             
-                                            <input class="form-control" id="inputStok" type="text" placeholder="Stok" />
+                                            <input class="form-control" name="stok" type="text" placeholder="Stok" />
                                             
                                         </div>
                                     </div>
@@ -186,25 +187,26 @@
                                 <div class="row mb-3">
                                     <div class="col-md-1">
                                      <div class="form-floating mb-3 mb-md-0">
-                                        <label for="inputDeskripsi"> Gambar </label> 
+                                        <label for="inputGambar"> Gambar </label> 
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-floating mb-1 mb-md-0">
-                                        <!-- <form method="POST" action="<?php echo base_url('uploads/upload') ?>" enctype="multipart/form-data"> -->
-                                            <input class="form-control" id="inputDeskripsi" type="file" name="Gambar" value="<?php echo $product->gambar ?>"/>                  
+                                            <input type="file" name="gambar" class="form-control-file ">
+                                            <!-- <input type="hidden" name="gambar" value="<?php echo $product->gambar ?>"/>                   -->
                                         </div>
                                     </div>
                                     
                                 </div>
+                            
+                            </div>
+                                <div class="d-flex align-items-center mt-1 mb-0">
+                                    <input type="submit" class="btn btn-primary" value="Tambahkan"> 
+                                </div>
+                                <div class="d-flex align-items-center mt-1 mb-0">
+                                    <input type="reset" class="btn btn-primary" value="Reset">
+                                </div>
                             </form>
-                            </div>
-                            <div class="d-flex align-items-center mt-1 mb-0">
-                                <input type="submit" class="btn btn-primary" value="Tambahkan"> 
-                            </div>
-                            <div class="d-flex align-items-center mt-1 mb-0">
-                                <input type="reset" class="btn btn-primary" value="Reset">
-                            </div>
                         </div>
                     </div>
                 </main>

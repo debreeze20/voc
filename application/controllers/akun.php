@@ -9,7 +9,11 @@ class akun extends CI_Controller {
     }
 
     public function index() {        
-        $this->load->view('form_login'); 
+        $this->load->view('home_dataProduk'); 
+    }
+
+    public function beranda() {        
+        $this->load->view('welcome_message'); 
     }
 
     public function aksi_login() {        
@@ -30,7 +34,7 @@ class akun extends CI_Controller {
             );
             $this->session->set_userdata($data_session);
 
-            $this->load->view('welcome_message'); 
+            redirect(base_url()."index.php/akun/product/");
         } else {
             redirect(base_url());
         }
@@ -50,19 +54,24 @@ class akun extends CI_Controller {
         }
     }
 
-    // public function product() {
-    //     if ($this->session->userdata('status')=="login") {
-    //         $dataProduct = $this->modelToko->getData("product");
+    public function library() {
+        if ($this->session->userdata('status') == "login") {
+            $dataProduct = $this->modelToko->getData("product");
         
-    //         $data = array(
-    //             "dataMu" => $dataProduct 
-    //         );
+            $data = array(
+                "dataLib" => $dataProduct 
+            );
             
-    //         $this->load->view("home_dataProduk", $data);
-    //     } else  {
-    //         redirect(base_url());
-    //     }
-    // }
+            $this->load->view("welcome_message", $data);
+        } else  {
+            redirect(base_url());
+        }
+    }
+
+
+    public function baca_anggota() {
+        $this->load->view('form_daftar'); 
+    }
 
     public function daftar() {
         $this->load->view('form_daftar');
@@ -85,6 +94,5 @@ class akun extends CI_Controller {
         $this->session->session_destroy();
         redirect(base_url());
     }
-
 
 }

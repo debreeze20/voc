@@ -20,8 +20,9 @@
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                                    <form action=" <?php echo base_url()."index.php/akun/aksi_login"; ?> " method="POST">
                                     <div class="card-body">
-                                        <form action="index.php/akun/aksi_login" method="POST">
+                                        
                                             <div class="form-floating mb-3">
                                                 <input name="username" class="form-control" id="inputUsername" type="text" placeholder="Username" />
                                                 <label for="inputUsername">Username</label>
@@ -39,8 +40,10 @@
                                                 <input type="submit" class="btn btn-primary" value="Login"/> 
                                                 <input type="reset" class="btn btn-primary" value="Reset"/>
                                             </div>
-                                        </form>
+                                        
                                     </div>
+                                    </form>
+
                                     <div class="card-footer text-center py-3">
                                         <div class="small"><a href="<?php echo base_url()."index.php/akun/daftar"; ?> ">Need an account? Sign up!</a></div>
                                     </div>

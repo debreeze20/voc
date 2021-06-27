@@ -3,9 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	public function index()
-	{
-		$this->load->view('form_login');
+	public function index() {
+		$this->load->view('welcome_message');
 	}
 
 	public function fungsi() {
@@ -16,6 +15,6 @@ class Welcome extends CI_Controller {
 		$data = array(
 			'nama' => $nama
 		);
-		$this->load->view('home', $data);
+		$this->load->view('home_dataProduk', $data);
 	}
 }

@@ -113,7 +113,7 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Dashboard</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item active">V.O.C</li>
                         </ol>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
@@ -204,20 +204,7 @@
                                     </tfoot>
                                     
                                     <tbody>
-                                        <?php foreach($dataLib as $dat) { ?>
-                                            <tr>
-                                                <td><?php echo $dat['no']; ?></td>
-                                                <td><?php echo $dat['nama']; ?></td>
-                                                <td><?php echo $dat['deskripsi']; ?></td>
-                                                <td><?php echo $dat['harga']; ?></td>
-                                                <td><?php echo $dat['stok']; ?></td>
-                                                <td><?php echo $dat['gambar']; ?></td>
-                                                <td>
-                                                    <a href="<?php echo base_url()."index.php/admin/hapus_data/".$dat['no']; ?>"> Hapus  </a>
-                                                    <a href="<?php echo base_url()."index.php/admin/ambil_DataWhere/".$dat['no']; ?>"> Update </a>
-                                                </td>
-                                            </tr>
-                                        <?php } ?>
+                                        
                                     </tbody>
                                 </table>
                             </div>

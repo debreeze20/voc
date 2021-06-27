@@ -6,13 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tambah Produk - V.O.C</title>
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <!-- <link href="css/styles.css" rel="stylesheet" /> -->
-        <link href="<?php echo base_url()."assets/css/styles.css" ?>" rel="stylesheet" />
+        <title>Static Navigation - SB Admin</title>
+        <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
-    <body class="sb-nav-fixed">
+    <body>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
@@ -73,8 +71,8 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="<?php echo base_url()."index.php/akun/index"; ?>">Login</a>
-                                            <a class="nav-link" href="<?php echo base_url()."index.php/akun/daftar"; ?>">Register</a>
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
                                             <a class="nav-link" href="password.html">Forgot Password</a>
                                         </nav>
                                     </div>
@@ -84,7 +82,7 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="<?php echo base_url()."index.php/akun/tentang"; ?>"> Tentang </a>
+                                            <a class="nav-link" href="401.html">401 Page</a>
                                             <a class="nav-link" href="404.html">404 Page</a>
                                             <a class="nav-link" href="500.html">500 Page</a>
                                         </nav>
@@ -96,7 +94,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Charts
                             </a>
-                            <a class="nav-link" href="<?php echo base_url()."index.php/akun/product"; ?>">
+                            <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tables
                             </a>
@@ -104,110 +102,31 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Username
+                        Start Bootstrap
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Tambah Produk</h1>
+                        <h1 class="mt-4">Static Navigation</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="<?php echo base_url()."index.php/akun/beranda" ?>">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tambah Produk</li>
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Static Navigation</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                                Bagian untuk menambahkan produk item.
+                                <p class="mb-0">
+                                    This page is an example of using static navigation. By removing the
+                                    <code>.sb-nav-fixed</code>
+                                    class from the
+                                    <code>body</code>
+                                    , the top navigation and side navigation will become static on scroll. Scroll down this page to see an example.
+                                </p>
                             </div>
                         </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Form Input Produk
-                            </div>
-                            <form action="<?php echo base_url()."index.php/admin/tambah_produk" ?>" method="POST">
-                            <div class="card-body">
-                            
-                                <div class="row mb-3">
-                                    <div class="col-md-1">
-                                        <div class="form-floating mb-3 mb-md-0">
-                                            <label for="inputNama"> Nama </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating mb-3 mb-md-0">
-                                            <input class="form-control" name="nama" type="text" placeholder="Nama" />      
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-1">
-                                        <div class="form-floating mb-3 mb-md-0">
-                                            <label for="inputNama"> Deskripsi </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating mb-3 mb-md-0">
-                                           
-                                            <input class="form-control" name="deskripsi" type="text" placeholder="Deskripsi" />
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-1">
-                                        <div class="form-floating mb-3 mb-md-0">
-                                            <label for="inputNama"> Harga </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating mb-3 mb-md-0">
-                                            
-                                            <input class="form-control" name="harga" type="text" value="Rp. " />
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-1">
-                                        <div class="form-floating mb-3 mb-md-0">
-                                            <label for="inputNama"> Stok </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating mb-3 mb-md-0">
-                                            
-                                            <input class="form-control" name="stok" type="text" placeholder="Stok" />
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="row mb-3">
-                                    <div class="col-md-1">
-                                     <div class="form-floating mb-3 mb-md-0">
-                                        <label for="inputGambar"> Gambar </label> 
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-floating mb-1 mb-md-0">
-                                            <input type="file" name="gambar" class="form-control-file ">
-                                            <!-- <input type="hidden" name="gambar" value="<?php echo $product->gambar ?>"/>                   -->
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            
-                            </div>
-                                <div class="d-flex align-items-center mt-1 mb-0">
-                                    <input type="submit" class="btn btn-primary" value="Tambahkan"> 
-                                </div>
-                                <div class="d-flex align-items-center mt-1 mb-0">
-                                    <input type="reset" class="btn btn-primary" value="Reset">
-                                </div>
-                            </form>
-                        </div>
+                        <div style="height: 100vh"></div>
+                        <div class="card mb-4"><div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div></div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -226,10 +145,5 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        <script src="<?php echo base_url()."assets/js/styles.js"?>" ></script>
     </body>
 </html>

@@ -32,7 +32,7 @@ class admin extends CI_Controller {
             'deskripsi' => $this->input->post('deskripsi'),
             'harga' => $this->input->post('harga'),
             'stok' => $this->input->post('stok'),
-            'gambar' => $this->input->post('index.php/akun/_uploadImage'),
+            'gambar' => $this->modelToko->_uploadImage('gambar'),
         );
 
         $this->modelToko->masukkan('product', $dataInputan);

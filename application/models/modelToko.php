@@ -28,10 +28,10 @@ class modelToko extends CI_Model {
         return  $syai->result_array();
     }
 
-    private function _uploadImage() {
+    public function _uploadImage() {
         $config['upload_path']          = './upload/product/';
         $config['allowed_types']        = 'gif|jpg|png';
-        $config['file_name']            = $this->no;
+        $config['file_name']            = $this->product->no;
         $config['overwrite']			= true;
         $config['max_size']             = 1024; // 1MB
         // $config['max_width']            = 1024;
